@@ -10,9 +10,9 @@ extern "C" {
 /*
  * Class:     com_grephq_ot_Jusb
  * Method:    open
- * Signature: ()V
+ * Signature: ()I
  */
-JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_open
+JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_open
   (JNIEnv *, jclass);
 
 /*
@@ -58,9 +58,9 @@ JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getConfiguration
 /*
  * Class:     com_grephq_ot_Jusb
  * Method:    getDescriptor
- * Signature: ()Ljava/lang/String;
+ * Signature: ()I
  */
-JNIEXPORT jstring JNICALL Java_com_grephq_ot_Jusb_getDescriptor
+JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getDescriptor
   (JNIEnv *, jclass);
 
 /*
@@ -82,9 +82,9 @@ JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_freeDeviceList
 /*
  * Class:     com_grephq_ot_Jusb
  * Method:    setConfiguration
- * Signature: (I)V
+ * Signature: (I)I
  */
-JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_setConfiguration
+JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_setConfiguration
   (JNIEnv *, jclass, jint);
 
 /*

@@ -31,7 +31,7 @@ public class Jusb {
 	/**
 	 * Creates a device handle for device
 	 */
-	public static native void open();
+	public static native int open();
 	
 	/**
 	 * Get the address of the device on the bus it is connected to
@@ -65,9 +65,9 @@ public class Jusb {
 	
 	/**
 	 * Retrieve a descriptor from a device
-	 * @return String
+	 * @return int
 	 */
-	public static native String getDescriptor();
+	public static native int getDescriptor();
 	
 	/**
 	 * Get the number of the bus the device is connected to
@@ -83,8 +83,9 @@ public class Jusb {
 	/**
 	 * Set the active configuration for a device
 	 * @param configuration
+	 * @return int
 	 */
-	public static native void setConfiguration(int configuration);
+	public static native int setConfiguration(int configuration);
 	
 	/**
 	 * Log message levels

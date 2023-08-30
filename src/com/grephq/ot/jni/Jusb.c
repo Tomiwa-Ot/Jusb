@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "com_grephq_ot_Jusb.h"
 
-JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_open(JNIEnv *, jclass) {
+JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_open(JNIEnv *, jclass) {
 
 }
 
@@ -38,7 +38,7 @@ JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_freeDeviceList(JNIEnv *, jclass) 
 
 }
 
-JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_setConfiguration(JNIEnv *, jclass, jint) {
+JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_setConfiguration(JNIEnv *, jclass, jint) {
 
 }
 
