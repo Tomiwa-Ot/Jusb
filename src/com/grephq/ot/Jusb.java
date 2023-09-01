@@ -26,57 +26,80 @@ public class Jusb {
 		this.vendorID = vendorID;
 		this.productID = productID;
 	}
-	
+
+	/**
+	 * Initialize libusb
+	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__lib.html#ga7deaef521cfb1a5b3f8d6c01be11a795">Documentation</a>
+	 */
+	public static native int init();
 	
 	/**
 	 * Creates a device handle for device
+	 * @param vendorID
+	 * @param productID
+	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#ga10d67e6f1e32d17c33d93ae04617392e">Documentation</a>
 	 */
-	public static native int open();
+	public static native int open(int vendorID, int productID);
 	
 	/**
 	 * Get the address of the device on the bus it is connected to
 	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#gab6d4e39ac483ebaeb108f2954715305d">Documentation</a>
 	 */
 	public static native int getDeviceAddress();
 	
 	/**
 	 * Returns the number of USB devices currently attached to the system
 	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#gac0fe4b65914c5ed036e6cbec61cb0b97">Documentation</a>
 	 */
 	public static native int getDeviceList();
 	
 	/**
 	 * Get the negotiated connection speed for a device
 	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#ga58c4e448ecd5cd4782f2b896ec40b22b">Documentation</a>
 	 */
 	public static native int getDeviceSpeed();
 	
 	/**
 	 * Get the number of the port that a device is connected to
 	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#ga14879a0ea7daccdcddb68852d86c00c4">Documentation</a>
 	 */
 	public static native int getPortNumber();
 	
 	/**
 	 * Determine the bConfigurationValue of the currently active configuration
+	 * @param configuration
 	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#gae921014b888b105471a31d54c77c1c4d">Documentation</a>
 	 */
-	public static native int getConfiguration();
+	public static native int getConfiguration(int configuration);
 	
 	/**
 	 * Retrieve a descriptor from a device
+	 * @param desc_type
+	 * @param desc_index
+	 * @param data
+	 * @param length
 	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__desc.html#ga9e34f7ecf3817e9bfe77ed09238940df">Documentation</a>
 	 */
-	public static native int getDescriptor();
+	public static native int getDescriptor(int desc_type, int desc_index, char data, int length);
 	
 	/**
 	 * Get the number of the bus the device is connected to
 	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#gaf2718609d50c8ded2704e4051b3d2925">Documentation</a>
 	 */
 	public static native int getBusNumber();
 	
 	/**
 	 * Frees a list of devices previously discovered
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#gad3b8561d064bb3e1b8851ddeed3cd7d6">Documentation</a>
 	 */
 	public static native void freeDeviceList();
 	
@@ -84,23 +107,33 @@ public class Jusb {
 	 * Set the active configuration for a device
 	 * @param configuration
 	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#ga785ddea63a2b9bcb879a614ca4867bed">Documentation</a>
 	 */
 	public static native int setConfiguration(int configuration);
 	
 	/**
 	 * Log message levels
 	 * @param level
+	 * @see <a href="">Documentation</a>
 	 */
 	public static native void setDebug(int level);
 	
 	/**
 	 * Attempt to restore previous configurations
 	 * @return int
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#gafee9c4638f1713ca5faa867948878111">Documentation</a>
 	 */
 	public static native int resetDevice();
 	
 	/**
 	 * Close a device handle
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#ga779bc4f1316bdb0ac383bddbd538620e">Documentation</a>
 	 */
 	public static native void close();
+
+	/**
+	 * Deinitialize libusb
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__lib.html#ga7deaef521cfb1a5b3f8d6c01be11a795">Documentation</a>
+	 */
+	public static native void exit();
 }
