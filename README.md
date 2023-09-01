@@ -4,5 +4,5 @@ Interface with devices connected via USB in Java using LibUSB
 
 ## Installation
 
-## Wiki
-https://github.com/grephq/Jusb/wiki
+## Documentation
+[https://grephq.github.io/Jusb](https://grephq.github.io/Jusb)
