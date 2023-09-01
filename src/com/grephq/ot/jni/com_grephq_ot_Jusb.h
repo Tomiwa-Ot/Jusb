@@ -9,11 +9,19 @@ extern "C" {
 #endif
 /*
  * Class:     com_grephq_ot_Jusb
- * Method:    open
+ * Method:    init
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_open
+JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_init
   (JNIEnv *, jclass);
+
+/*
+ * Class:     com_grephq_ot_Jusb
+ * Method:    open
+ * Signature: (II)I
+ */
+JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_open
+  (JNIEnv *, jclass, jint, jint);
 
 /*
  * Class:     com_grephq_ot_Jusb
@@ -50,18 +58,18 @@ JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getPortNumber
 /*
  * Class:     com_grephq_ot_Jusb
  * Method:    getConfiguration
- * Signature: ()I
+ * Signature: (I)I
  */
 JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getConfiguration
-  (JNIEnv *, jclass);
+  (JNIEnv *, jclass, jint);
 
 /*
  * Class:     com_grephq_ot_Jusb
  * Method:    getDescriptor
- * Signature: ()I
+ * Signature: (IICI)I
  */
 JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getDescriptor
-  (JNIEnv *, jclass);
+  (JNIEnv *, jclass, jint, jint, jchar, jint);
 
 /*
  * Class:     com_grephq_ot_Jusb
@@ -109,6 +117,14 @@ JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_resetDevice
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_close
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     com_grephq_ot_Jusb
+ * Method:    exit
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_exit
   (JNIEnv *, jclass);
 
 #ifdef __cplusplus
