@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.grephq.ot","l":"Jusb"},{"p":"com.grephq.ot","l":"JusbError"},{"p":"com.grephq.ot","l":"JusbLogLevel"},{"p":"com.grephq.ot","l":"JusbSpeed"}]

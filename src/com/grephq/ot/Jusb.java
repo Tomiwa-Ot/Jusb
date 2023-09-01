@@ -5,6 +5,8 @@
 package com.grephq.ot;
 
 /**
+ * Java wrapper for libusb
+ *
  * @author Olorunfemi-Ojo Tomiwa
  * @version v1.0.0
  * @since 12-2022
@@ -36,8 +38,8 @@ public class Jusb {
 	
 	/**
 	 * Creates a device handle for device
-	 * @param vendorID
-	 * @param productID
+	 * @param vendorID the idVendor value to search fo
+	 * @param productID the idProduct value to search for
 	 * @return int
 	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#ga10d67e6f1e32d17c33d93ae04617392e">Documentation</a>
 	 */
@@ -73,7 +75,7 @@ public class Jusb {
 	
 	/**
 	 * Determine the bConfigurationValue of the currently active configuration
-	 * @param configuration
+	 * @param configuration output location for the bConfigurationValue of the active configuration (only valid for return code 0)
 	 * @return int
 	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#gae921014b888b105471a31d54c77c1c4d">Documentation</a>
 	 */
@@ -81,10 +83,10 @@ public class Jusb {
 	
 	/**
 	 * Retrieve a descriptor from a device
-	 * @param desc_type
-	 * @param desc_index
-	 * @param data
-	 * @param length
+	 * @param desc_type the descriptor type
+	 * @param desc_index the index of the descriptor to retrieve
+	 * @param data output buffer for descriptor
+	 * @param length size of data buffer
 	 * @return int
 	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__desc.html#ga9e34f7ecf3817e9bfe77ed09238940df">Documentation</a>
 	 */
@@ -105,7 +107,7 @@ public class Jusb {
 	
 	/**
 	 * Set the active configuration for a device
-	 * @param configuration
+	 * @param configuration the bConfigurationValue of the configuration you wish to activate, or -1 if you wish to put the device in an unconfigured state
 	 * @return int
 	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#ga785ddea63a2b9bcb879a614ca4867bed">Documentation</a>
 	 */
@@ -113,8 +115,8 @@ public class Jusb {
 	
 	/**
 	 * Log message levels
-	 * @param level
-	 * @see <a href="">Documentation</a>
+	 * @param level debug level
+	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__lib.html#ga5f8376b7a863a5a8d5b8824feb8a427a">Documentation</a>
 	 */
 	public static native void setDebug(int level);
 	
