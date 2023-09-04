@@ -101,9 +101,10 @@ public class Jusb {
 	
 	/**
 	 * Frees a list of devices previously discovered
+	 * @param unref_devices whether to unref the devices in the list
 	 * @see <a href="https://libusb.sourceforge.io/api-1.0/group__libusb__dev.html#gad3b8561d064bb3e1b8851ddeed3cd7d6">Documentation</a>
 	 */
-	public static native void freeDeviceList();
+	public static native void freeDeviceList(int unref_devices);
 	
 	/**
 	 * Set the active configuration for a device
