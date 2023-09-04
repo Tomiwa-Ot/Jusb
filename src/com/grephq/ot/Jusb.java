@@ -14,7 +14,7 @@ package com.grephq.ot;
 public class Jusb {
 	
 	static {
-		System.loadLibrary("Jusb");
+		System.loadLibrary("libusbjava");
 	}
 	
 	/** USB device vendor ID */
