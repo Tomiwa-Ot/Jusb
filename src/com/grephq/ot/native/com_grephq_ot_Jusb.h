@@ -82,10 +82,10 @@ JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getBusNumber
 /*
  * Class:     com_grephq_ot_Jusb
  * Method:    freeDeviceList
- * Signature: ()V
+ * Signature: (I)V
  */
 JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_freeDeviceList
-  (JNIEnv *, jclass);
+  (JNIEnv *, jclass, jint);
 
 /*
  * Class:     com_grephq_ot_Jusb
