@@ -31,7 +31,8 @@ JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getDeviceAddress(JNIEnv *env, jcl
 }
 
 JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getDeviceList(JNIEnv *env, jclass obj) {
-
+    libusb_device** devicePtr = &device;
+    return libusb_get_device_list(ctx, &devicePtr);
 }
 
 JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getDeviceSpeed(JNIEnv *env, jclass obj) {
@@ -54,8 +55,8 @@ JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_getBusNumber(JNIEnv *env, jclass 
     return libusb_get_bus_number(device);
 }
 
-JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_freeDeviceList(JNIEnv *env, jclass obj) {
-
+JNIEXPORT void JNICALL Java_com_grephq_ot_Jusb_freeDeviceList(JNIEnv *env, jclass obj, jint unref_devices) {
+    libusb_free_device_list(&device, unref_devices);
 }
 
 JNIEXPORT jint JNICALL Java_com_grephq_ot_Jusb_setConfiguration(JNIEnv *env, jclass obj, jint configuration) {
