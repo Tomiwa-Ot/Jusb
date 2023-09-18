@@ -5,4 +5,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Jusb</name>
   <description>libusb 1.0 in Java</description>
+  <url>https://grephq.github.io/jusb</url>
+  <licenses>
+  	<license>
+  		<name>Eclipse Public License v2.0</name>
+  		<url>https://raw.githubusercontent.com/grephq/Jusb/master/LICENSE</url>
+  		<distribution>repo</distribution>
+  	</license>
+  </licenses>
 </project>
