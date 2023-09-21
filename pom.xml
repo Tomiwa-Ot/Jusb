@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.grephq.ot.jusb</groupId>
   <artifactId>com.grephq.ot.jusb</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
   <name>Jusb</name>
   <description>libusb 1.0 in Java</description>
   <url>https://grephq.github.io/jusb</url>
