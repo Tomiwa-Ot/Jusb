@@ -19,7 +19,7 @@ Interface with devices connected via USB in Java using LibUSB
 	    <artifactId>Jusb</artifactId>
 	    <version>1.0</version>
 	</dependency>
- ```
+  ```
 
 
 ## Documentation
