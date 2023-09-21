@@ -5,20 +5,20 @@ Interface with devices connected via USB in Java using LibUSB
 ## Installation
 - Add the JitPack repository to your build file
   ```xml
-  	<repositories>
-		 <repository>
-		     <id>jitpack.io</id>
-		     <url>https://jitpack.io</url>
-	  	</repository>
-	 </repositories>
+    <repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
   ```
 - Add the dependency
   ```xml
-  <dependency>
-	     <groupId>com.github.grephq</groupId>
-	     <artifactId>Jusb</artifactId>
-	     <version>Tag</version>
-	 </dependency>
+    <dependency>
+	    <groupId>com.github.grephq</groupId>
+	    <artifactId>Jusb</artifactId>
+	    <version>1.0</version>
+	</dependency>
  ```
 
 
